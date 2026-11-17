@@ -1,0 +1,3 @@
+[Crypto-platform:abnormal_1] The same ServiceAccount attempts Secret enumeration.
+Error from server (Forbidden): secrets is forbidden: User "system:serviceaccount:pbl-security:pbl-crypto-platform-app" cannot list resource "secrets" in API group "" in the namespace "pbl-security"
+Forbidden as expected. Audit identity: system:serviceaccount:pbl-security:pbl-crypto-platform-app

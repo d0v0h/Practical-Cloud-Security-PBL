@@ -1,0 +1,35 @@
+{
+  "_설명": "계정별 정상 행동 목록. RBAC 권한이 아니라 앱이 실제로 해야 하는 일을 기준으로 작성한다.",
+  "window_seconds": 30,
+  "denial_threshold": 3,
+  "sensitive_resources": [
+    "secrets", "pods/exec", "pods/attach", "pods/portforward",
+    "serviceaccounts/token", "nodes/proxy",
+    "roles", "rolebindings", "clusterroles", "clusterrolebindings"
+  ],
+  "accounts": {
+    "system:serviceaccount:pbl-security:pbl-crypto-platform-app": {
+      "namespaces": ["pbl-security"],
+      "allowed": {
+        "pods": ["get", "list"],
+        "services": ["get", "list"],
+        "configmaps": ["get", "list"],
+        "endpoints": ["get", "list"]
+      }
+    },
+    "system:serviceaccount:pbl-security:pbl-legacy-app": {
+      "namespaces": ["pbl-security"],
+      "allowed": {
+        "pods": ["get", "list"],
+        "configmaps": ["get", "list"]
+      }
+    },
+    "system:serviceaccount:pbl-security:pbl-ops-operator": {
+      "namespaces": ["pbl-security"],
+      "allowed": {
+        "pods": ["get", "list"],
+        "pods/exec": ["get", "create"]
+      }
+    }
+  }
+}

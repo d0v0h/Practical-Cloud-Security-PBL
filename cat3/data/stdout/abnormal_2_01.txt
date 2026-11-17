@@ -1,0 +1,14 @@
+[Crypto-platform:abnormal_2] The same ServiceAccount attempts pods/exec on backend-675ff9dbd8-k4mrb.
+{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {},
+  "status": "Failure",
+  "message": "pods \"backend-675ff9dbd8-k4mrb\" is forbidden: User \"system:serviceaccount:pbl-security:pbl-crypto-platform-app\" cannot create resource \"pods/exec\" in API group \"\" in the namespace \"pbl-security\"",
+  "reason": "Forbidden",
+  "details": {
+    "name": "backend-675ff9dbd8-k4mrb",
+    "kind": "pods"
+  },
+  "code": 403
+}Forbidden as expected. Audit identity: system:serviceaccount:pbl-security:pbl-crypto-platform-app

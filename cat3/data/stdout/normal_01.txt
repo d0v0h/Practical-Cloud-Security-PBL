@@ -1,0 +1,16 @@
+[1/4] List Pods using pbl-crypto-platform-app.
+NAME                        READY   STATUS    RESTARTS      AGE
+backend-675ff9dbd8-k4mrb    1/1     Running   1 (13m ago)   12d
+db-6db76974b5-br8dp         1/1     Running   1 (13m ago)   12d
+frontend-8686cd79f6-cmxbb   2/2     Running   2 (13m ago)   12d
+[2/4] List Services using pbl-crypto-platform-app.
+NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+backend    ClusterIP   10.96.110.49    <none>        80/TCP    12d
+db         ClusterIP   10.96.31.125    <none>        80/TCP    12d
+frontend   ClusterIP   10.96.203.246   <none>        80/TCP    12d
+[3/4] List ConfigMaps using pbl-crypto-platform-app.
+NAME               DATA   AGE
+kube-root-ca.crt   1      12d
+[4/4] Read the frontend Pod using pbl-crypto-platform-app.
+pod/frontend-8686cd79f6-cmxbb
+Audit identity: system:serviceaccount:pbl-security:pbl-crypto-platform-app

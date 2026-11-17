@@ -1,0 +1,20 @@
+[Crypto-platform:abnormal_3] Rapid enumeration with the same ServiceAccount.
+burst=1/6 resource=pods
+burst=1/6 resource=secrets
+burst=1/6 resource=configmaps
+burst=2/6 resource=pods
+burst=2/6 resource=secrets
+burst=2/6 resource=configmaps
+burst=3/6 resource=pods
+burst=3/6 resource=secrets
+burst=3/6 resource=configmaps
+burst=4/6 resource=pods
+burst=4/6 resource=secrets
+burst=4/6 resource=configmaps
+burst=5/6 resource=pods
+burst=5/6 resource=secrets
+burst=5/6 resource=configmaps
+burst=6/6 resource=pods
+burst=6/6 resource=secrets
+burst=6/6 resource=configmaps
+Burst completed. Compare resource, verb, target, status, and frequency for system:serviceaccount:pbl-security:pbl-crypto-platform-app.
